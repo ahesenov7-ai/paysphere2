@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="PaySphere — AI-powered payment platform with intelligent risk scoring. Secure transactions for banks, startups, and modern businesses.">
+  <title>PaySphere — AI-Powered Payment & Risk Intelligence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%2300D4FF'/><stop offset='100%25' stop-color='%23A855F7'/></linearGradient></defs><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='white'>P</text></svg>">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Pay<span class="text-gradient">Sphere</span></span>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#dashboard" class="nav-link" data-i18n="nav.dashboard">Dashboard</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#feedback" class="nav-link" data-i18n="nav.feedback">Feedback</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="az">AZ</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="tr">TR</button>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <a href="#dashboard" class="btn btn-primary" data-i18n="nav.tryDemo">Try Demo</a>
+        </div>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text scroll-animate">
+            <div class="hero-badge">
+              <span class="hero-badge-pulse"></span>
+              <span data-i18n="hero.badge">AI-Powered Risk Detection</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span data-i18n="hero.titleStart">Secure Payments,</span><br>
+              <span class="text-gradient text-glow" data-i18n="hero.titleHighlight">Intelligent Protection</span>
+            </h1>
+
+            <p class="hero-description" data-i18n="hero.description">
+              Real-time AI risk scoring for every transaction. Automatically verify safe payments and block fraudulent
+              ones—with clear explanations every time.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#dashboard" class="btn btn-primary btn-lg" data-i18n="hero.startDemo">🚀 Start Demo</a>
+              <a href="#pricing" class="btn btn-secondary btn-lg" data-i18n="hero.seePricing">View Pricing</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-value">99.9%</div>
+                <div class="hero-stat-label" data-i18n="hero.stat1">Accuracy</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-value">&lt;50ms</div>
+                <div class="hero-stat-label" data-i18n="hero.stat2">Response</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-value">500K+</div>
+                <div class="hero-stat-label" data-i18n="hero.stat3">Protected</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual scroll-animate">
+            <div class="hero-dashboard">
+              <div class="hero-dashboard-header">
+                <span class="hero-dashboard-title" data-i18n="hero.dashTitle">Live Transactions</span>
+                <span class="hero-dashboard-status" data-i18n="hero.dashStatus">Processing</span>
+              </div>
+              <div class="hero-dashboard-content">
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon">💳</div>
+                    <div>
+                      <div class="transaction-name">Payment to Amazon</div>
+                      <div class="transaction-time">Just now</div>
+                    </div>
+                  </div>
+                  <span class="transaction-status status-verified">✓ Verified</span>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon">🔒</div>
+                    <div>
+                      <div class="transaction-name">Unknown Device Login</div>
+                      <div class="transaction-time">2 min ago</div>
+                    </div>
+                  </div>
+                  <span class="transaction-status status-blocked">✕ Blocked</span>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon">🌍</div>
+                    <div>
+                      <div class="transaction-name">International Transfer</div>
+                      <div class="transaction-time">5 min ago</div>
+                    </div>
+                  </div>
+                  <span class="transaction-status status-pending">⏳ Review</span>
+                </div>
+                <div class="risk-score-display">
+                  <div class="risk-score-label" data-i18n="hero.riskLabel">Current Risk Score</div>
+                  <div class="risk-score-value risk-score-low" id="hero-risk-score">12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Demo -->
+    <section class="section dashboard-section" id="dashboard">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-label">
+            <span>📊</span>
+            <span data-i18n="dashboard.label">Live Demo</span>
+          </span>
+          <h2 class="section-title" data-i18n="dashboard.title">AI Risk Dashboard</h2>
+          <p class="section-description" data-i18n="dashboard.description">
+            See real-time transaction monitoring with AI-powered risk scoring and automatic verification.
+          </p>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Transactions -->
+          <div class="dashboard-main scroll-animate">
+            <div class="dashboard-header">
+              <div class="dashboard-title-group">
+                <h3 data-i18n="dashboard.txTitle">Recent Transactions</h3>
+                <p class="dashboard-subtitle" data-i18n="dashboard.txSubtitle">AI analyzed • Auto-verified</p>
+              </div>
+              <div class="dashboard-actions">
+                <button class="btn btn-secondary" id="refresh-tx" data-i18n="dashboard.refresh">↻ Refresh</button>
+              </div>
+            </div>
+
+            <div class="transactions-list" id="transactions-list">
+              <!-- Generated by JS -->
+            </div>
+          </div>
+
+          <!-- Device Intelligence -->
+          <div class="device-intel scroll-animate">
+            <div class="device-intel-header">
+              <h4 data-i18n="device.title">🔍 Device Intelligence</h4>
+              <p data-i18n="device.subtitle">Your current session data</p>
+            </div>
+
+            <div class="device-info-list" id="device-info-list">
+              <div class="device-info-item">
+                <span class="device-info-label">🌐 IP Address</span>
+                <span class="device-info-value" id="device-ip">Loading...</span>
+              </div>
+              <div class="device-info-item">
+                <span class="device-info-label">💻 Device</span>
+                <span class="device-info-value" id="device-type">Loading...</span>
+              </div>
+              <div class="device-info-item">
+                <span class="device-info-label">🌍 Browser</span>
+                <span class="device-info-value" id="device-browser">Loading...</span>
+              </div>
+              <div class="device-info-item">
+                <span class="device-info-label">⚙️ OS</span>
+                <span class="device-info-value" id="device-os">Loading...</span>
+              </div>
+              <div class="device-info-item">
+                <span class="device-info-label">📍 Location</span>
+                <span class="device-info-value" id="device-location">Loading...</span>
+              </div>
+            </div>
+
+            <div class="trust-indicator safe" id="trust-indicator">
+              <span class="trust-icon">🛡️</span>
+              <div class="trust-text">
+                <h5 data-i18n="device.trustTitle">Device Trusted</h5>
+                <p data-i18n="device.trustText">No security threats detected</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-label">
+            <span>💎</span>
+            <span data-i18n="pricing.label">Pricing</span>
+          </span>
+          <h2 class="section-title" data-i18n="pricing.title">Choose Your Plan</h2>
+          <p class="section-description" data-i18n="pricing.description">
+            Transparent pricing for businesses of all sizes. Start free, scale as you grow.
+          </p>
+        </div>
+
+        <div class="pricing-toggle-container scroll-animate">
+          <div class="billing-toggle">
+            <span class="billing-label" data-i18n="pricing.monthly">Monthly</span>
+            <button class="billing-switch" id="billing-toggle">
+              <span class="billing-switch-thumb"></span>
+            </button>
+            <span class="billing-label" data-i18n="pricing.yearly">Yearly</span>
+            <span class="billing-discount" data-i18n="pricing.discount">Save 30%</span>
+          </div>
+
+          <div class="audience-toggle">
+            <button class="audience-btn active" data-audience="b2c" data-i18n="pricing.b2c">For Individuals</button>
+            <button class="audience-btn" data-audience="b2b" data-i18n="pricing.b2b">For Business</button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Free -->
+          <div class="pricing-card scroll-animate">
+            <div class="pricing-header">
+              <div class="pricing-icon">🆓</div>
+              <h3 class="pricing-name" data-i18n="pricing.freeName">Free</h3>
+              <p class="pricing-tagline" data-i18n="pricing.freeTagline">Get started</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-value">$0</span>
+              <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.freeF1">100 transactions/month</span>
+              </li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.freeF2">Basic risk scoring</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.freeF3">Email support</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.freeF4">1 user</span></li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn" data-i18n="pricing.startFree">Start Free</button>
+          </div>
+
+          <!-- Standard -->
+          <div class="pricing-card pricing-card-featured scroll-animate">
+            <div class="pricing-badge" data-i18n="pricing.popular">Most Popular</div>
+            <div class="pricing-header">
+              <div class="pricing-icon">⚡</div>
+              <h3 class="pricing-name" data-i18n="pricing.standardName">Standard</h3>
+              <p class="pricing-tagline" data-i18n="pricing.standardTagline">For growing teams</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-value" data-monthly="$29" data-yearly="$20">$29</span>
+              <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+            </div>
+            <div class="pricing-annual-note" data-i18n="pricing.billedYearly">Billed yearly ($240/year)</div>
+            <ul class="pricing-features">
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.standardF1">10,000
+                  transactions/month</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.standardF2">Advanced AI scoring</span>
+              </li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.standardF3">Device intelligence</span>
+              </li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.standardF4">Priority support</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.standardF5">5 users</span></li>
+            </ul>
+            <button class="btn btn-primary pricing-btn" data-i18n="pricing.getStandard">Get Standard</button>
+          </div>
+
+          <!-- Premium -->
+          <div class="pricing-card scroll-animate">
+            <div class="pricing-header">
+              <div class="pricing-icon">👑</div>
+              <h3 class="pricing-name" data-i18n="pricing.premiumName">Premium</h3>
+              <p class="pricing-tagline" data-i18n="pricing.premiumTagline">For enterprises</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-value" data-monthly="$99" data-yearly="$69">$99</span>
+              <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+            </div>
+            <div class="pricing-annual-note" data-i18n="pricing.billedYearlyPremium">Billed yearly ($828/year)</div>
+            <ul class="pricing-features">
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF1">Unlimited transactions</span>
+              </li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF2">Custom AI models</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF3">API access</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF4">24/7 phone support</span>
+              </li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF5">Unlimited users</span></li>
+              <li><span class="feature-check">✓</span> <span data-i18n="pricing.premiumF6">SLA guarantee</span></li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn" data-i18n="pricing.getPremium">Get Premium</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-label">
+            <span>📧</span>
+            <span data-i18n="contact.label">Contact</span>
+          </span>
+          <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+          <p class="section-description" data-i18n="contact.description">
+            Have questions? Our team is here to help.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info scroll-animate">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.emailTitle">Email Us</h4>
+                <p><a href="mailto:hello@paysphere.ai">hello@paysphere.ai</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.salesTitle">Sales</h4>
+                <p><a href="mailto:sales@paysphere.ai">sales@paysphere.ai</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🛟</div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.supportTitle">Support</h4>
+                <p><a href="mailto:support@paysphere.ai">support@paysphere.ai</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card scroll-animate">
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" data-i18n="contact.nameLabel">Name</label>
+                  <input type="text" class="form-input" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-i18n="contact.emailLabel">Email</label>
+                  <input type="email" class="form-input" id="contact-email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.subjectLabel">Subject</label>
+                <input type="text" class="form-input" id="contact-subject">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.messageLabel">Message</label>
+                <textarea class="form-textarea" id="contact-message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" data-i18n="contact.submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="section feedback-section" id="feedback">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-label">
+            <span>💬</span>
+            <span data-i18n="feedback.label">Feedback</span>
+          </span>
+          <h2 class="section-title" data-i18n="feedback.title">Share Your Experience</h2>
+          <p class="section-description" data-i18n="feedback.description">
+            Help us improve PaySphere with your feedback.
+          </p>
+        </div>
+
+        <div class="feedback-card scroll-animate">
+          <form id="feedback-form">
+            <div class="form-group">
+              <label class="form-label" data-i18n="feedback.ratingLabel">How would you rate your experience?</label>
+              <div class="rating-group" id="rating-group">
+                <button type="button" class="rating-btn" data-rating="1">😞</button>
+                <button type="button" class="rating-btn" data-rating="2">😐</button>
+                <button type="button" class="rating-btn" data-rating="3">🙂</button>
+                <button type="button" class="rating-btn" data-rating="4">😊</button>
+                <button type="button" class="rating-btn active" data-rating="5">🤩</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="feedback.messageLabel">Your feedback</label>
+              <textarea class="form-textarea" id="feedback-message" placeholder="Tell us what you think..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" data-i18n="feedback.submit">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">⚡ Pay<span class="text-gradient">Sphere</span></div>
+        <p class="footer-text" data-i18n="footer.tagline">
+          AI-Powered Payment & Risk Intelligence<br>Secure transactions for modern business
+        </p>
+        <div class="footer-links">
+          <a href="#" class="footer-link" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" class="footer-link" data-i18n="footer.terms">Terms</a>
+          <a href="#" class="footer-link" data-i18n="footer.docs">API Docs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Chat Widget -->
+  <div class="chat-widget">
+    <button class="chat-widget-btn" id="chat-toggle">🤖</button>
+
+    <div class="chat-widget-window" id="chat-window">
+      <div class="chat-header">
+        <div class="chat-header-avatar">🤖</div>
+        <div class="chat-header-info">
+          <h4 data-i18n="chat.title">PaySphere AI</h4>
+          <p data-i18n="chat.subtitle">Risk Intelligence Assistant</p>
+        </div>
+        <button class="chat-close" id="chat-close">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message chat-message-ai" data-i18n="chat.welcome">
+          👋 Hi! I'm PaySphere AI. I can help you understand risk scores, analyze transactions, and explain why payments
+          are verified or blocked. What would you like to know?
+        </div>
+      </div>
+
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" id="chat-input" data-i18n-placeholder="chat.placeholder"
+          placeholder="Ask about risk scores..." autocomplete="off">
+        <button class="chat-send" id="chat-send" data-i18n="chat.send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>index.ntml
